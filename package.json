@@ -1,0 +1,17 @@
+{
+  "name": "on-brella-403-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:all": "concurrently -n hw,be,fe -c cyan,magenta,green \"npm start --prefix hardwareSimulation\" \"npm start --prefix backend\" \"npm run dev --prefix frontend\"",
+    "start": "npm run start --prefix backend",
+    "test": "npm install --prefix backend && npm run test --prefix backend",
+    "test:coverage": "npm install --prefix backend && npm run test:coverage --prefix backend",
+    "test:backend": "npm run test --prefix backend",
+    "test:hardware": "npm run test --prefix hardwareSimulation",
+    "test:hardware:coverage": "npm run test:coverage --prefix hardwareSimulation"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

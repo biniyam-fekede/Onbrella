@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: on-brella-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 5001
+      - key: HARDWARE_URL
+        value: http://localhost:3000
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: ADMIN_EMAIL
+        value: admin@onbrella.com
+      - key: STRIPE_SECRET_KEY
+        sync: false
+
+  - type: web
+    name: on-brella-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_PUBLISHABLE_KEY
+        sync: false
+      - key: VITE_API_URL
+        sync: false
+      - key: VITE_ADMIN_EMAIL
+        value: admin@onbrella.com
