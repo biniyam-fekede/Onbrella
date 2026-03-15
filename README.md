@@ -4,7 +4,6 @@ Your on-the-go umbrella service!
 
 **[Demo video (YouTube)](https://youtu.be/GJD8BtV9umM)**
 
-Link to living document: `https://docs.google.com/document/d/1LU65YB4aleQ35Zhabvx-X3Wg0-YQ28uRWCdxK4oSLe8/edit?usp=sharing`
 
 ## Start here (docs)
 
@@ -38,14 +37,6 @@ Link to living document: `https://docs.google.com/document/d/1LU65YB4aleQ35Zhabv
   - **Support/complaints queue** (`support_requests`) with open/resolved states
 - **Hardware simulation integration**
   - Mock hardware service supports **unlock** and **return** (state persists in Supabase DB via backend)
-
-### Final release tag
-
-The final release (including documentation) is tagged **`final_release`** in this repository.
-
-### GenAI attribution
-
-Parts of this project (including code review and documentation updates) were assisted by generative AI using **Cursor** with an OpenAI GPT-based model. All AI-assisted changes were reviewed by the team before committing.
 
 ## Description
 
